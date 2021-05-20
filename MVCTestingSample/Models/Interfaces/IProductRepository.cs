@@ -9,7 +9,7 @@ namespace MVCTestingSample.Models.Interfaces
     {
         Task<Product> GetProductByIdAysnc(int id);
 
-        Task<IEnumerable<Product>> GetAllProductsAsync();
+        Task<List<Product>> GetAllProductsAsync();
 
         Task AddProductAsync(Product p);
 
