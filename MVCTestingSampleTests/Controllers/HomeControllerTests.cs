@@ -18,6 +18,7 @@ namespace MVCTestingSample.Controllers.Tests
             IActionResult result = myController.Index();
 
             Assert.IsNotNull(result);
+            Assert.IsInstanceOfType(result, typeof(ViewResult), "Index should return a ViewResult");
         }
     }
 }
