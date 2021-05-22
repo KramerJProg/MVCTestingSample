@@ -8,11 +8,22 @@ namespace MVCTestingSample.Models
 {
     public class Product
     {
+        private string name;
+
         [Key]
         public int ProductId { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string Name 
+        { 
+            get => name;
+            set
+            {
+                if (value == null)
+                    throw new ArgumentNullException($"{nameof(Name)} cannot be Null.");
+                name = value;
+            }
+        }
 
         public string Price { get; set; }
     }
